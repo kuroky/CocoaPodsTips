@@ -110,15 +110,21 @@ Updating spec repo `master`
 --------------------------------------------------------------------------------
 ```
 #### 2.3 后续
-此时你的 MXFileManager.podspec 就会 pull request 到远程索引库，CocoaPods 官方审核通过后，就可以出现在远程索引库中，当远程索引库收录后：
+- 此时你的 MXFileManager.podspec 就会 pull request 到远程索引库，CocoaPods 官方审核通过后，就可以出现在远程索引库中，当远程索引库收录后：
 
-pod setup
-这时你的本地索引库，会新加入 MXFileManager.podspec 这条记录，但是本地索引文件还未更新，因此删除掉以下路径的本地索引文件：
+```Ruby
+pod setup # 创建本地索引库
+```
+- 这时你的本地索引库，会新加入 MXFileManager.podspec 这条记录，但是本地索引文件还未更新
 
+```Ruby
+pod repo update
+```
+- 如果还是查询不到，删除掉以下路径的本地索引文件：
+
+```Ruby
 ~/资源库/Caches/CocoaPods/search_index.json
-执行 pod search MXFileManager 命令，当 search_index.json 文件重建完毕后，就可以在使用这个远程框架库了。
-
-- 命令行 pod setup ， 创建本地索引库
-- 命令行 pod install ，将框架集成到项目中
+```
+- 执行 `pod search MXFileManager` 命令，当 `search_index.json` 文件重建完毕后，就可以在使用这个远程框架库了。
 
 
