@@ -1,6 +1,6 @@
 ## 制作基于Git的CocoaPods私有库 
 ### 创建Git项目
-![屏幕快照 2018-10-29 上午10.16.19]()
+![屏幕快照 2018-10-29 上午10.16.19](https://raw.githubusercontent.com/kuroky/CocoaPodsTips/master/Resource/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-29%20%E4%B8%8A%E5%8D%8810.16.19.png)
 
 - **Classes** 私有库的类文件
 - **EventTrack.podspec** 私有库的podspec
@@ -10,7 +10,7 @@
 
 ### 编辑podspec文件
 
-```Swift
+```Ruby
 Pod::Spec.new do |s|
   s.name             = 'EventTrack'
   s.version          = '1.1.0'
@@ -39,5 +39,5 @@ pod 'EventTrack' , :git => 'ssh://git@192.168.16.172:7999/em/ios-eventtrack.git'
 pod 'EventTrack' , :git => 'ssh://git@192.168.16.172:7999/em/ios-eventtrack.git', :branch => 'EventTrack-1.1.0'
 
 // 指定tag
-pod 'EventTrack' , :git => 'ssh://git@192.168.16.172:7999/em/ios-eventtrack.git', :tag => '0.7.0'
+pod 'EventTrack' , :git => 'ssh://git@192.168.16.172:7999/em/ios-eventtrack.git', :tag => '1.0.0'
 ```
